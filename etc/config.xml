@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Tun2U
+ * @package     Tun2U_VivaPayments
+ * @author      Tun2U Team <dev@tun2u.com>
+ * @copyright   Copyright (c) 2024 Tun2U (https://www.tun2u.com)
+ * @license     https://opensource.org/licenses/gpl-3.0.html  GNU General Public License (GPL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <paymentmethod>
+                <active>1</active>
+                <title>PaymentMethod</title>
+                <order_status>pending_payment</order_status>
+                <payment_action>true</payment_action>
+                <model>Tun2U\VivaPayments\Model\PaymentMethod</model>
+                <order_url>https://www.vivapayments.com/api/orders</order_url>
+                <cgi_url>https://www.vivapayments.com/web/newtransaction.aspx</cgi_url>
+                <merchantid>MerchantID</merchantid>
+                <merchantpass>API Key</merchantpass>
+                <merchantsource>Source Code</merchantsource>
+                <Installments>90:3,180:6</Installments>
+                <title>Credit Card (Viva Wallet Smart Checkout)</title>
+                <transaction_url>https://www.vivapayments.com/api/transactions/</transaction_url>
+                <currency>EUR</currency>
+                <token_url>https://accounts.vivapayments.com/connect/token</token_url>
+                <isv>1</isv>
+                <isv_checkout>https://api.vivapayments.com/checkout/v2/isv/orders</isv_checkout>
+                <isv_amount>0.1</isv_amount>
+            </paymentmethod>
+        </payment>
+    </default>
+</config>

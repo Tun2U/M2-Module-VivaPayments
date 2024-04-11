@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Tun2U
+ * @package     Tun2U_VivaPayments
+ * @author      Tun2U Team <dev@tun2u.com>
+ * @copyright   Copyright (c) 2024 Tun2U (https://www.tun2u.com)
+ * @license     https://opensource.org/licenses/gpl-3.0.html  GNU General Public License (GPL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="vivapayments" frontName="vivapayments">
+            <module name="Tun2U_Vivapayments" />
+        </route>
+    </router>
+</config>
