@@ -63,27 +63,27 @@ php bin/magento cache:flush
 
 -   <strong>Source Code: Enter the Source Code of the Source you created in Step 3: Create Payment Source
 
--   <strong>OrderCode URL<strong>:
+-   <strong>OrderCode URL</strong>:
     <ol>
     <li>Enter https://www.vivapayments.com/api/orders if you are using a live Viva instance</li>
     <li>Enter https://demo.vivapayments.com/api/orders if you are using a demo Viva instance</li>
     </ol>
 
--   <strong>Gateway URL<strong>:
+-   <strong>Gateway URL</strong>:
     <ol>
     <li>Enter https://www.vivapayments.com/web/newtransaction.aspx if you are using a live Viva instance</li>
     <li>Enter https://demo.vivapayments.com/web/newtransaction.aspx if you are using a demo Viva instance</li>
     </ol>
 
--   <strong>Transaction URL<strong>:
+-   <strong>Transaction URL</strong>:
     <ol>
     <li>Enter https://www.vivapayments.com/api/transactions if you are using a live Viva instance</li>
     <li>Enter https://demo.vivapayments.com/api/transactions if you are using a demo Viva instance</li>
     </ol>
--   <strong>Installments<strong>: This is an optional field, only applicable to Greek merchants – you can set the maximum allowed payment card installments and their corresponding order values
--   <strong>Enable ISV mode<strong>: This field determines whether ISV mode is active or not
--   <strong>ISV Checkout URL<strong>: Enter https://api.vivapayments.com/checkout/v2/isv/orders if you are using a ISV mode. It will replace OrderCode URL field.
--   <strong>ISV Amount<strong>: ISV Amount fee
+-   <strong>Installments</strong>: This is an optional field, only applicable to Greek merchants – you can set the maximum allowed payment card installments and their corresponding order values
+-   <strong>Enable ISV mode</strong>: This field determines whether ISV mode is active or not
+-   <strong>ISV Checkout URL</strong>: Enter https://api.vivapayments.com/checkout/v2/isv/orders if you are using a ISV mode. It will replace OrderCode URL field.
+-   <strong>ISV Amount</strong>: ISV Amount fee
 
 ## Support
 
