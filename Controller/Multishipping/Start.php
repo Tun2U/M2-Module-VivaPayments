@@ -36,7 +36,7 @@ class Start extends \Magento\Framework\App\Action\Action
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \Tun2U\VivaPayments\Model\PaymentMethod $paymentMethod,
         \Magento\Framework\Session\SessionManagerInterface $session,
-        \Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
+        \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
     ) {
         $this->_checkoutSession = $checkoutSession;
         $this->_resultPageFactory = $resultPageFactory;

@@ -1,1 +1,4 @@
 *** Viva Wallet Smart Checkout Changelog ***
+
+2024-04-15 - version 1.0.1
+* fix DI for Tun2U/VivaPayments/Controller/Multishipping/Start.php

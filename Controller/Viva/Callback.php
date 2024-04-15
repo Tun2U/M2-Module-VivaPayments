@@ -15,7 +15,6 @@ namespace Tun2U\VivaPayments\Controller\Viva;
 use Magento\Framework\App\CsrfAwareActionInterface;
 use Magento\Framework\App\Request\InvalidRequestException;
 use Magento\Framework\App\RequestInterface;
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Action\Action as AppAction;
 use Exception;
 
