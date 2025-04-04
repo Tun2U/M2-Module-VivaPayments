@@ -290,15 +290,15 @@ class CookieManager implements CookieManagerInterface
     private function computeExpirationTime(array $metadataArray)
     {
         if (
-            isset($metadataArray[PhpCookieManager::KEY_EXPIRE_TIME])
-            && $metadataArray[PhpCookieManager::KEY_EXPIRE_TIME] < time()
+            isset($metadataArray['expiry'])
+            && $metadataArray['expiry'] < time()
         ) {
-            $expireTime = $metadataArray[PhpCookieManager::KEY_EXPIRE_TIME];
+            $expireTime = $metadataArray['expiry'];
         } else {
             if (isset($metadataArray[CookieMetadata::KEY_DURATION])) {
                 $expireTime = $metadataArray[CookieMetadata::KEY_DURATION] + time();
             } else {
-                $expireTime = PhpCookieManager::EXPIRE_AT_END_OF_SESSION_TIME;
+                $expireTime = 0;
             }
         }
 
@@ -351,7 +351,7 @@ class CookieManager implements CookieManagerInterface
         $metadataArray = $this->scope->getCookieMetadata($metadata)->__toArray();
 
         // explicitly set an expiration time in the metadataArray.
-        $metadataArray[PhpCookieManager::KEY_EXPIRE_TIME] = PhpCookieManager::EXPIRE_NOW_TIME;
+        $metadataArray['expiry'] = 1;
 
         $this->checkAbilityToSendCookie($name, '');
 

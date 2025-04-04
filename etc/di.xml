@@ -19,4 +19,9 @@
     <preference for="Magento\Multishipping\Controller\Checkout\OverviewPost" type="Tun2U\VivaPayments\Controller\Multishipping\CheckoutSubmit"/>
     <preference for="Magento\Framework\Stdlib\CookieManagerInterface" type="Tun2U\VivaPayments\Stdlib\Cookie\CookieManager"/>
     <preference for="Magento\Framework\Session\SessionManagerInterface" type="Tun2U\VivaPayments\Session\SessionManager"/>
+
+    <!-- Fix for null payment info in order view -->
+    <type name="Magento\Sales\Block\Order\View">
+        <plugin name="vivapayments_fix_payment_info" type="Tun2U\VivaPayments\Plugin\Sales\Block\Order\ViewPlugin" />
+    </type>
 </config>

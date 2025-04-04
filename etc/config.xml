@@ -30,6 +30,7 @@
                 <isv>1</isv>
                 <isv_checkout>https://api.vivapayments.com/checkout/v2/isv/orders</isv_checkout>
                 <isv_amount>0.1</isv_amount>
+                <isv_client_id>clientID</isv_client_id>
             </paymentmethod>
         </payment>
     </default>

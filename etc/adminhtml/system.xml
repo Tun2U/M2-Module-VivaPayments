@@ -78,6 +78,18 @@
                         <field id="isv">1</field>
                     </depends>
                 </field>
+                <field id="isv_client_id" translate="label" type="text" sortOrder="125" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ISV Client ID</label>
+                    <depends>
+                        <field id="isv">1</field>
+                    </depends>
+                </field>
+                <field id="isv_client_secret" translate="label" type="text" sortOrder="126" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ISV Client Secret</label>
+                    <depends>
+                        <field id="isv">1</field>
+                    </depends>
+                </field>
                 <field id="sort_order" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Sort Order</label>
                     <frontend_class>validate-number</frontend_class>

@@ -76,6 +76,11 @@ class Callback extends AppAction implements CsrfAwareActionInterface
     protected $_urlBuilder;
 
     /**
+     * @var \Magento\Framework\HTTP\Client\Curl
+     */
+    protected $_client;
+
+    /**
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Sales\Model\OrderFactory $orderFactory
      * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository

@@ -11,6 +11,8 @@
 namespace Tun2U\VivaPayments\Model;
 
 use Exception;
+use Magento\Framework\DataObject;
+use Magento\Payment\Model\InfoInterface;
 
 class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
 {
@@ -22,6 +24,7 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
     protected $_code = 'paymentmethod';
     protected $_isInitializeNeeded = true;
     protected $_canRefund = true;
+    protected $_infoBlockType = \Magento\Payment\Block\Info::class;
 
     public function __construct(
         \Magento\Framework\Model\Context $context,
@@ -217,8 +220,8 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
             $poststring['customerTrns'] = $storeName;
             $poststring['amount'] = $amountcents;
 
-            $ivsClientId = '3jxmwi50874g6cb00500a9675byov6ooye3a4re8qt3g3.apps.vivapayments.com'; // ISV Client ID
-            $ivsClientSecret = '1rW2e7tm8e6y8atuj9yw7GOiYDsM2Z'; // ISV Client Secret
+            $ivsClientId = $this->getConfigData('isv_client_id');
+            $ivsClientSecret = $this->getConfigData('isv_client_secret');
             $postargs = json_encode($poststring);
             $accessToken = $this->getIsvToken($ivsClientId, $ivsClientSecret);
         } else {
@@ -438,5 +441,21 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
         }
 
         return $this;
+    }
+
+    /**
+     * Ensure info instance is never null when rendering order
+     *
+     * @return InfoInterface
+     */
+    public function getInfoInstance()
+    {
+        $instance = parent::getInfoInstance();
+        if ($instance === null) {
+            // Create a fallback info instance to prevent null errors
+            $instance = $this->_objectManager->create(InfoInterface::class);
+            $this->setInfoInstance($instance);
+        }
+        return $instance;
     }
 }
