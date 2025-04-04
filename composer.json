@@ -2,7 +2,7 @@
     "name": "tun2u/m2-module-vivapayments",
     "description": "Magento 2 VivaPayments Module",
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "minimum-stability": "stable",
     "license": "proprietary",
     "require": {
